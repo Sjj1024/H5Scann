@@ -9,7 +9,6 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import { showToast } from 'vant'
 import { Html5Qrcode } from 'html5-qrcode'
 
 const codeContent = ref('1024')
@@ -52,7 +51,6 @@ Html5Qrcode.getCameras()
                         console.log('decodedText', decodedText)
                         // console.log('decodedResult', decodedResult)
                         codeContent.value = decodedText
-                        showToast(decodedText)
                     },
                     (errorMessage) => {
                         // parse error, ignore it.
