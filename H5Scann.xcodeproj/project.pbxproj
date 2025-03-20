@@ -7,18 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E499F7292D8C26B800811E30 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E499F7282D8C26B800811E30 /* WebView.swift */; };
 		E4FC218C2D8986C000BBE5FC /* H5ScannApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FC218B2D8986C000BBE5FC /* H5ScannApp.swift */; };
 		E4FC218E2D8986C000BBE5FC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FC218D2D8986C000BBE5FC /* ContentView.swift */; };
-		E4FC21902D8986C000BBE5FC /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FC218F2D8986C000BBE5FC /* Item.swift */; };
 		E4FC21922D8986C100BBE5FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4FC21912D8986C100BBE5FC /* Assets.xcassets */; };
 		E4FC21962D8986C100BBE5FC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4FC21952D8986C100BBE5FC /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E499F7282D8C26B800811E30 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		E4FC21882D8986C000BBE5FC /* H5Scann.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = H5Scann.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4FC218B2D8986C000BBE5FC /* H5ScannApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = H5ScannApp.swift; sourceTree = "<group>"; };
 		E4FC218D2D8986C000BBE5FC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		E4FC218F2D8986C000BBE5FC /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		E4FC21912D8986C100BBE5FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E4FC21932D8986C100BBE5FC /* H5Scann.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = H5Scann.entitlements; sourceTree = "<group>"; };
 		E4FC21952D8986C100BBE5FC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -56,7 +56,7 @@
 			children = (
 				E4FC218B2D8986C000BBE5FC /* H5ScannApp.swift */,
 				E4FC218D2D8986C000BBE5FC /* ContentView.swift */,
-				E4FC218F2D8986C000BBE5FC /* Item.swift */,
+				E499F7282D8C26B800811E30 /* WebView.swift */,
 				E4FC21912D8986C100BBE5FC /* Assets.xcassets */,
 				E4FC21932D8986C100BBE5FC /* H5Scann.entitlements */,
 				E4FC21942D8986C100BBE5FC /* Preview Content */,
@@ -142,8 +142,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E499F7292D8C26B800811E30 /* WebView.swift in Sources */,
 				E4FC218E2D8986C000BBE5FC /* ContentView.swift in Sources */,
-				E4FC21902D8986C000BBE5FC /* Item.swift in Sources */,
 				E4FC218C2D8986C000BBE5FC /* H5ScannApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
