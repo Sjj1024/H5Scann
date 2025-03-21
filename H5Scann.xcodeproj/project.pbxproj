@@ -16,6 +16,7 @@
 
 /* Begin PBXFileReference section */
 		E499F7282D8C26B800811E30 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		E4DC2C2C2D8D42D500DFA151 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E4FC21882D8986C000BBE5FC /* H5Scann.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = H5Scann.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4FC218B2D8986C000BBE5FC /* H5ScannApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = H5ScannApp.swift; sourceTree = "<group>"; };
 		E4FC218D2D8986C000BBE5FC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -54,6 +55,7 @@
 		E4FC218A2D8986C000BBE5FC /* H5Scann */ = {
 			isa = PBXGroup;
 			children = (
+				E4DC2C2C2D8D42D500DFA151 /* Info.plist */,
 				E4FC218B2D8986C000BBE5FC /* H5ScannApp.swift */,
 				E4FC218D2D8986C000BBE5FC /* ContentView.swift */,
 				E499F7282D8C26B800811E30 /* WebView.swift */,
@@ -278,6 +280,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = H5Scann/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -316,6 +319,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = H5Scann/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;

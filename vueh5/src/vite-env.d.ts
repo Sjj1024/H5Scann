@@ -10,3 +10,9 @@ declare module '*.css' {
     const content: string
     export default content
 }
+
+// vant
+// declare module 'vant' {
+//     const component: DefineComponent<{}, {}, any>
+//     export default component
+// }
