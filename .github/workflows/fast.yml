@@ -1,0 +1,71 @@
+name: Build App
+
+on:
+    push:
+        branches:
+            - main
+    pull_request:
+        branches:
+            - main
+
+jobs:
+    build:
+        runs-on: macos-latest
+
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
+
+            - name: Set up Ruby environment
+              uses: ruby/setup-ruby@v1
+              with:
+                  ruby-version: '3.1' # 你可以选择适合的 Ruby 版本
+                  bundler-cache: true # 缓存 bundler 依赖，提高构建速度
+
+            - name: Install Fastlane
+              run: |
+                  sudo gem install fastlane
+
+            - name: Create ExportOptions.plist
+              run: |
+                  cat > ExportOptions.plist <<EOF
+                  <?xml version="1.0" encoding="UTF-8"?>
+                  <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+                  <plist version="1.0">
+                  <dict>
+                      <key>method</key>
+                      <string>debugging</string>
+                      <key>teamID</key>
+                      <string></string>
+                      <key>signingStyle</key>
+                      <string>none</string>
+                      <key>compileBitcode</key>
+                      <false/>
+                      <key>uploadBitcode</key>
+                      <false/>
+                      <key>uploadSymbols</key>
+                      <false/>
+                      <key>signingCertificate</key>
+                      <string></string>
+                      <key>provisioningProfiles</key>
+                      <dict/>
+                  </dict>
+                  </plist>
+                  EOF
+
+            - name: Build unsigned IPA using Fastlane
+              run: |
+                  fastlane gym --project "H5Scann.xcodeproj" \
+                              --scheme "H5Scann" \
+                              --configuration "Release" \
+                              --output_directory "$GITHUB_WORKSPACE/build" \
+                              --export_method "ad-hoc" \
+                              --skip_package_ipa true\
+                              --codesigning-identity "" \
+                              --export_options "ExportOptions.plist"
+
+            - name: Upload IPA artifact
+              uses: actions/upload-artifact@v4
+              with:
+                  name: IPA
+                  path: build/*.ipa # 上传生成的 .ipa 文件
