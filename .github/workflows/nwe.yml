@@ -64,6 +64,9 @@ jobs:
                   CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO \
                   | xcpretty
 
+            - name: Check if Archive Exists
+              run: ls -l $GITHUB_WORKSPACE/build/
+
             - name: Upload IPA Artifact
               uses: actions/upload-artifact@v4
               with:
